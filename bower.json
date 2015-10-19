@@ -1,0 +1,26 @@
+{
+  "name": "jumpship-framework",
+  "version": "0.0.1",
+  "homepage": "https://github.com/storybud/jumpship",
+  "authors": [
+    "Karl Courtney",
+    "Chun Tung",
+    "Kevin Durley"
+  ],
+  "description": "JumpShip framework dev dependencies",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-scss": "normalize.scss#~3.0.3"
+  }
+}

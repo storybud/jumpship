@@ -6,5 +6,9 @@ module.exports = {
 	sass: {
 		files: 'src/sass/**/*.scss',
 		tasks: 'compass'
+	},
+	uglify: {
+		files: 'src/js/**/*.js',
+		tasks: 'uglify'
 	}
 };
