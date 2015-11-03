@@ -1,5 +1,11 @@
 //RESET
 @import '../bower/normalize-scss/normalize';
 
+//TOOLS
+@import 'compass';
+@import 'susy';
+
 //MAIN SASS
+@import 'vars';
+@import 'grid';
 @import 'base';

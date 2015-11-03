@@ -1,0 +1,79 @@
+$susy: (
+	// math: static,
+	columns: 4,
+	container: 1920px,
+	global-box-sizing: border-box,
+	debug: (image: show),
+	gutter-position: split,
+	column-width: 48px,
+	gutters: 2 / 3,
+);
+
+@include border-box-sizing;
+
+
+
+.jump-grid {
+	@include container();
+}
+
+.jump-col-xs-1 {
+	@include span(4 of 4);
+	background-color: orange;
+	opacity: 0.5;
+}
+
+.jump-col-lrg-1-2 {
+	@include span(4 of 4);
+	background-color: green;
+	opacity: 0.5;
+}
+
+
+//SMALL SIZE
+@media only screen and (min-width: 640px) {
+	.jump-grid {
+		@include show-grid(8);
+		// @include container(8);
+	}
+}
+
+//MEDIUM SIZE
+@media only screen and (min-width: 960px) {
+	.jump-grid {
+		@include show-grid(12);
+		// @include container(12);
+	}
+
+	.jump-col-md-1-2 {
+		@include span(6 of 12);
+
+		// &:last-child {
+		// 	 @include last;
+		// }
+	}
+}
+
+//LARGE SIZE
+@media only screen and (min-width: 1280px) {
+	.jump-grid {
+		@include show-grid(16);
+		// @include container(16);
+	}
+
+	.jump-col-lrg-1-2 {
+		@include span(8 of 16);
+
+		// &:last-child {
+		// 	 @include last;
+		// }
+	}
+}
+
+//EXTRA LARGE SIZE
+@media only screen and (min-width: 1920px) {
+	.jump-grid {
+		@include show-grid(20);
+		// @include container(20);
+	}
+}

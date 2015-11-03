@@ -9,7 +9,9 @@ module.exports = function(grunt) {
 		},
 		data: {
 			SRC: 'src/',
-			BUILD: 'build/'
+			TEMPLATE: 'src/template/',
+			DATA: 'src/data/',
+			BUILD: 'build/',
 		}
 	});
 };
