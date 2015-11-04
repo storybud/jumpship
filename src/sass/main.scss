@@ -5,6 +5,9 @@
 @import 'compass';
 @import 'susy';
 
+//MIXINS
+@import 'mixins/mediaquery';
+
 //MAIN SASS
 @import 'vars';
 @import 'grid';
