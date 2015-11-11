@@ -15,6 +15,8 @@ $susy: (
 
 .j-row {
 	@include container(100%);
+	// display: flex;
+	// flex-wrap: wrap;
 
 	@include media-query($mq-small) {
 		@include show-grid(8);
@@ -30,33 +32,85 @@ $susy: (
 	}
 }
 
-.col-1 {
+[class*="j-col-"] {
+	margin-bottom: gutter($h-gutter);
+}
+
+.j-col-1 {
 	@include span(4 of 4);
+	background-color: green;
+	opacity: 0.5;
 
 	@include media-query($mq-small) {
-		@include show-grid(8);
+		@include span(8 of 8);
 	}
 	@include media-query($mq-medium) {
-		@include show-grid(12);
+		@include span(12 of 12);
 	}
 	@include media-query($mq-large) {
-		@include show-grid(16);
+		@include span(16 of 16);
 	}
 	@include media-query($mq-xlarge) {
-		@include show-grid(20);
+		@include span(20 of 20);
 	}
 }
 
-.col-1-2 {
+.j-col-1-2 {
+	@include span(4 of 4);
+	background-color: orange;
+	opacity: 0.5;
 
+	@include media-query($mq-small) {
+		@include span(4 of 8);
+	}
+	@include media-query($mq-medium) {
+		@include span(6 of 12);
+	}
+	@include media-query($mq-large) {
+		@include span(8 of 16);
+	}
+	@include media-query($mq-xlarge) {
+		@include span(10 of 20);
+	}
 }
 
-.col-1-3 {
+.j-col-1-3 {
+	@include span(4 of 4);
+	background-color: green;
+	opacity: 0.5;
 
+	@include media-query($mq-small) {
+		@include span(4 of 8);
+	}
+	@include media-query($mq-medium) {
+		@include span(4 of 12);
+	}
+	@include media-query($mq-large) {
+		@include span(16 of 16);
+	}
+	@include media-query($mq-xlarge) {
+		@include span(20 of 20);
+	}
 }
 
-.col-2-3 {
+.j-col-2-3 {
+	@include span(4 of 4);
+	background-color: green;
+	opacity: 0.5;
+	height: 48px;
 
+	@include media-query($mq-small) {
+		@include span(4 of 8);
+	}
+	@include media-query($mq-medium) {
+		@include span(8 of 12);
+	}
+	@include media-query($mq-large) {
+		@include span(16 of 16);
+	}
+	@include media-query($mq-xlarge) {
+		@include span(20 of 20);
+	}
 }
 
 // .jump-col-xs-1, .jc-xs-1 {
