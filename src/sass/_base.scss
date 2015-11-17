@@ -1,4 +1,5 @@
 body {
+	font-size:16px;
 }
 
 .wrap {
@@ -8,4 +9,8 @@ body {
 h1 {
 	color: red;
 	font-size: $base-font;
+}
+
+img {
+	width: 100%;
 }
