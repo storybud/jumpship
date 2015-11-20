@@ -1,7 +1,7 @@
 $susy: (
 	// math: static,
 	columns: 4,
-	container: 1920px,
+	// container: 1920px,
 	global-box-sizing: border-box,
 	debug: (image: show),
 	gutter-position: split,
@@ -13,16 +13,114 @@ $susy: (
 
 
 
-.jump-grid {
-	@include container();
-	margin-bottom: gutter(10);
+.j-row {
+	@include container(100%);
+	// display: flex;
+	// flex-wrap: wrap;
+
+	@include media-query($mq-small) {
+		@include show-grid(8);
+	}
+	@include media-query($mq-medium) {
+		@include show-grid(12);
+	}
+	@include media-query($mq-large) {
+		@include show-grid(16);
+	}
+	@include media-query($mq-xlarge) {
+		@include show-grid(20);
+	}
 }
 
-.jump-col-xs-1, .jc-xs-1 {
+[class*="j-col-"] {
+	margin-bottom: gutter($h-gutter);
+}
+
+.j-col-1 {
+	@include span(4 of 4);
+	background-color: green;
+	// opacity: 0.5;
+
+	@include media-query($mq-small) {
+		@include span(8 of 8);
+	}
+	@include media-query($mq-medium) {
+		@include span(full inside no-gutters);
+		// @include gutters(0em after);
+		//margin: gutters(0em);
+		//@include gutter-position(after);
+	}
+	@include media-query($mq-large) {
+		@include span(16 of 16);
+	}
+	@include media-query($mq-xlarge) {
+		@include span(20 of 20);
+	}
+}
+
+.j-col-1-2 {
 	@include span(4 of 4);
 	background-color: orange;
-	opacity: 0.5;
+	// opacity: 0.5;
+
+	@include media-query($mq-small) {
+		@include span(4 of 8);
+	}
+	@include media-query($mq-medium) {
+		@include span(6 of 12);
+	}
+	@include media-query($mq-large) {
+		@include span(8 of 16);
+	}
+	@include media-query($mq-xlarge) {
+		@include span(10 of 20);
+	}
 }
+
+.j-col-1-3 {
+	@include span(4 of 4);
+	background-color: green;
+	// opacity: 0.5;
+
+	@include media-query($mq-small) {
+		@include span(4 of 8);
+	}
+	@include media-query($mq-medium) {
+		@include span(4 of 12);
+	}
+	@include media-query($mq-large) {
+		@include span(16 of 16);
+	}
+	@include media-query($mq-xlarge) {
+		@include span(20 of 20);
+	}
+}
+
+.j-col-2-3 {
+	@include span(4 of 4);
+	background-color: green;
+	// opacity: 0.5;
+	// height: 48px;
+
+	@include media-query($mq-small) {
+		@include span(4 of 8 at 5);
+	}
+	@include media-query($mq-medium) {
+		@include span(8 of 12);
+	}
+	@include media-query($mq-large) {
+		@include span(16 of 16);
+	}
+	@include media-query($mq-xlarge) {
+		@include span(20 of 20);
+	}
+}
+
+// .jump-col-xs-1, .jc-xs-1 {
+// 	@include span(4 of 4);
+// 	background-color: orange;
+// 	opacity: 0.5;
+// }
 
 .jump-col-lrg-1-2 {
 	//@include span(4 of 4);
@@ -34,10 +132,7 @@ $susy: (
 //SMALL SIZE
 @media only screen and (min-width: 640px) {
 	
-	.jump-grid {
-		@include show-grid(8);
-		// @include container(8);
-	}
+	
 
 	.jump-col-s-1, .jc-s-1 {
 		@include span(8 of 8);
@@ -48,21 +143,17 @@ $susy: (
 	}
 
 	.jump-col-s-1-3, .jc-s-1-3 {
-		@include span(2.6 of 8);
+		@include span(2.66666 of 8 gutters(0));
 	}
 
 	.jump-col-s-2-3, .jc-s-2-3 {
-		@include span(5.3 of 8);
+		@include span(5.333333 of 8 gutters(0));
 	}
 
 }
 
 //MEDIUM SIZE
 @media only screen and (min-width: 960px) {
-	.jump-grid {
-		@include show-grid(12);
-		// @include container(12);
-	}
 
 	.jump-col-md-1-2 {
 		@include span(6 of 12);
@@ -74,10 +165,6 @@ $susy: (
 
 //LARGE SIZE
 @media only screen and (min-width: 1280px) {
-	.jump-grid {
-		@include show-grid(16);
-		// @include container(16);
-	}
 
 	.jump-col-lrg-1-2 {
 		@include span(8 of 16);
@@ -90,8 +177,14 @@ $susy: (
 
 //EXTRA LARGE SIZE
 @media only screen and (min-width: 1920px) {
-	.jump-grid {
-		@include show-grid(20);
-		// @include container(20);
-	}
+
 }
+
+
+
+
+
+
+
+
+
